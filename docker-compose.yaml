@@ -4,7 +4,7 @@ services:
     environment:
     - WEBSOCKETPORT=8081
     ports:
-    - 81:81/tcp
+    - 81:80/tcp
     - 8081:8081/tcp
     - 3671:3671/tcp
     - 50000:50000/udp
@@ -12,5 +12,5 @@ services:
     - 22222:22/udp  
     container_name: edomi
     image: starwarsfan/edomi-docker:amd64-latest
-    network_mode: "host"
+    network_mode: "bridge"
     restart: on-failure
